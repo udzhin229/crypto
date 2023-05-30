@@ -10,11 +10,11 @@ function _U_LANG(u_lang) {
 }
 
 function _changeCss() {
-	if (document.querySelector('.style').getAttribute('href') === '/css/_.css') {
-		document.querySelector('.style').href = "/css/_dark.css";
+	if (document.querySelector('.style').getAttribute('href') === 'css/_.css') {
+		document.querySelector('.style').href = "css/_dark.css";
 		localStorage.setItem('style', '_dark');
 	} else {
-		document.querySelector('.style').href = "/css/_.css";
+		document.querySelector('.style').href = "css/_.css";
 		localStorage.setItem('style', '_');
 	}
 }
