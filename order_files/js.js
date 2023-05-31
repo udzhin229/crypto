@@ -5,11 +5,11 @@ function _hide() {
 }
 
 function _changeCss() {
-	if (document.querySelector('.style').getAttribute('href') === 'css/style.css') {
-		document.querySelector('.style').href = "css/dark.css";
+	if (document.querySelector('.style').getAttribute('href') === 'order_files/style.css') {
+		document.querySelector('.style').href = "order_files/dark.css";
 		localStorage.setItem('style', '_dark');
 	} else {
-		document.querySelector('.style').href = "css/style.css";
+		document.querySelector('.style').href = "order_files/style.css";
 		localStorage.setItem('style', '_');
 	}
 }

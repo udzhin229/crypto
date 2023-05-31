@@ -34,21 +34,17 @@
 						d="M1004 1651 c-48 -29 -162 -176 -170 -217 -9 -48 17 -103 63 -134 28 -19 49 -25 92 -25 l56 0 6 -38 c12 -73 116 -145 169 -117 25 13 40 5 40 -21 0 -32 27 -76 62 -101 26 -18 45 -22 90 -21 43 1 58 -2 58 -13 0 -25 61 -84 100 -95 55 -17 125 18 159 79 63 115 4 229 -116 225 -38 -1 -42 1 -48 28 -14 63 -95 114 -160 101 -27 -5 -28 -4 -21 31 8 45 -12 96 -49 125 -21 17 -41 22 -86 22 l-59 0 6 44 c15 107 -101 183 -192 127z" />
 				</g>
 			</svg>
-			<a style=" " href="index.html">CRYPTO</a>
+			<a href="index.html">CRYPTO</a>
 			<a href="index.html" style="font-weight: 400; font-size: 50%; margin-top: -9px">TM</a>
 		</div>
 		<div class="headerText" style="font-size: 80%;">HIGH-QUALITY AND FAST CURRENCY EXCHANGE SERVICE</div>
-		<!-- <div class="headerLogin" onclick="location.href = '/login/'">
-			<img src="images/auth.png" height="20">
-			<div>Authorization</div>
-		</div> -->
 		<div class="headerLogin" style="margin-left: 8px;" onclick="_changeCss()">
 			<img src="fonts/brightness-medium.svg" height="20">
 		</div>
-		<div class="headerLang">
-			<div onclick="_U_LANG('ru')">RU</div>
-			<div onclick="_U_LANG('en')">EN</div>
-		</div>
+		<!-- <div class="headerLang">
+			<div class="language-link" data-lang="ru">RU</div>
+			<div class="language-link" data-lang="en">EN</div>
+		</div> -->
 	</div>
 	<div id="data">
 		<!-- <form method="get" action="/" id="form2">
@@ -58,7 +54,7 @@
 		<form method="post" action id="form1" onsubmit="ym(90902496,'reachGoal','formSubmit')">
 			<div class="left" style="width: 50%; float: left">
 				<div class="line" style>
-					<div class="grey"><span> You give</span></div>
+					<div class="grey"><span>You give</span></div>
 					<img class="coinicon" id="coin1" src="fonts/bitcoin_btc.svg">
 					<select class="select" name="from" id="from">
 						<option value="tezos">Tezos</option>
@@ -94,7 +90,7 @@
 						<option value="dash">Dash</option>
 					</select>
 					<!-- <div class="triangle">▼</div> -->
-					<input id="inputTo" name="inputTo" maxlength="9" type="number" value="0.000000" step="any" placeholder>
+					<input id="inputTo" name="inputTo" maxlength="9" type="number" value="0.0000" step="any" placeholder>
 					<div class="desc" id="desc2"></div>
 				</div>
 				<div id="divListTo" class="divList"></div>
@@ -106,30 +102,29 @@
 					<div>⚠ <span></span></div>
 				</div> -->
 				<div class="infoInputEmpty" style="display: flex; align-items: center">
-					Ex. rate<span> </span>: 
-					<b id="bCurs">1 BTC = 00 000,000 USD</b>
+					<span>Ex. course:</span>
+					<b id="bCurs"></b>
 					<img src="images/update.png" id="updateButton" height="16" style="margin:0 8px; cursor: pointer;"
 						title="Updating the course">
 					<!-- <text id="homeTimer">5:00</text> -->
 				</div>
 
-				<div class="infoInputEmpty">Minimum<span></span> the amount: <b>0.00000000 BTC</b></div>
-				<div class="infoInputEmpty">Maximum<span></span> the amount: <b>0.00000000 BTC</b></div>
+				<!-- <div class="infoInputEmpty">Minimum<span></span> the amount: <b>0.00000000 BTC</b></div>
+				<div class="infoInputEmpty">Maximum<span></span> the amount: <b>0.00000000 BTC</b></div> -->
 			</div>
 			<div class="right" style="width: 50%; float: right;">
 				<div id="divFio">
 					<img class="rcoinicon" id="coin3" src="fonts/advcash_usd.svg">
-					<input id="inputFio" name="inputFio" maxlength="36" type="text" placeholder="Wallet address"
-						required>
+					<input id="inputFio" name="inputFio" maxlength="36" type="text" placeholder="Wallet address" required>
 				</div>
 
 				<img class="rcoinicon" src="images/email2.png">
-				<input id="inputEmail" name="inputEmail" maxlength="36" type="email" value="" placeholder="E-mail" required autocomplete="off">
+				<input id="inputEmail" name="inputEmail" maxlength="36" type="email" placeholder="E-mail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required autocomplete="off">
 
-				<div style="display: flex; align-items: center; margin-top: 16px;">
+				<div style="display: flex; align-items: center; margin-top: 6px;">
 					<input type="submit" name value="Make an exchange" id="submit">
 					<input type="checkbox" id="rules" style="margin: 12px" required>
-					<label style="font-size: 80%;">I agree to the processing of personal data and accept <a
+					<label style="font-size: 80%;"><span >I agree to the processing of personal data and accept</span> <a
 							href="rules/index.html" target="_blank">exchange rules</a>
 					</label>
 				</div>
@@ -141,14 +136,14 @@
 	<!-- <div class="balance">
 		<div id="balance"></div>
 	</div> -->
-	<div id="notific" onclick="this.style.left = '-400px'; "></div>
+	<!-- <div id="notific" onclick="this.style.left = '-400px'; "></div>
 	<div class="cookie">
 		<div>
 			By staying on our site, you agree to the use of cookies. Details in <a target="_blank"
-				href="/rules/#cookie">exchange rules</a>
+				href="rules/index.html#cookie">exchange rules</a>
 		</div>
 		<img src="images/x.png" height="24" onclick="_hide()">
-	</div>
+	</div> -->
 
 
 	<div class="trust" id="trust" style>
@@ -165,7 +160,7 @@
 			<div>
 				<span>
 					High-quality and fast currency exchange service.<br>Akadeemia tee 15a, 12618 Tallinn, Estonia <br> All
-					rights reserved. <span onclick>Copyright</span> <span>©</span> <span>2023</span> <a href="/rules/"
+					rights reserved. <span onclick>Copyright</span> <span>©</span> <span>2023</span> <a href="rules/index.html"
 						target="_blank">rules</a><br>
 				</span>
 			</div>
@@ -183,168 +178,7 @@
 	</div>
 	<!-- <script data-cfasync="false" src="js/email-decode.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-	<script>
-$(document).ready(function() {
-  var coinAbbreviations = {
-    'btc': 'BTC',
-    'dog': 'DOGE',
-    'tezos': 'XTZ',
-    'zcash': 'ZEC',
-    'tron': 'TRX',
-    'litecoin': 'LTC',
-    'eth': 'ETH',
-    'stellar': 'XLM',
-    'monero': 'XMR',
-    'dash': 'DASH',
-    // Другие ключи и значения
-  };
-
-  // Установка изображения при загрузке страницы
-  var selectedCoin = $("#from").val();
-  var imageName = "images/svg/" + selectedCoin + ".svg";
-  var abbreviation = coinAbbreviations[selectedCoin];
-  $("#desc1").text(abbreviation);
-  $("#coin1").attr("src", imageName);
-
-  // Установка изображения при загрузке страницы
-  var selectedCoin1 = $("#to").val();
-  var imageName1 = "images/svg/" + selectedCoin1 + ".svg";
-  var abbreviation1 = coinAbbreviations[selectedCoin1];
-  $("#desc2").text(abbreviation1);
-  $("#coin2").attr("src", imageName1);
-  $("#coin3").attr("src", imageName1);
-
-  function getExchangeRate(currency) {
-    var symbol = coinAbbreviations[currency] + "USDT";
-    var url = "https://api.binance.com/api/v3/ticker/price?symbol=" + symbol;
-
-    return new Promise(function(resolve, reject) {
-      $.ajax({
-        url: url,
-        method: 'GET',
-        success: function(response) {
-          var exchangeRate = response.price;
-          resolve({ currency: currency, rate: exchangeRate });
-        },
-        error: function(error) {
-          reject(error);
-        }
-      });
-    });
-  }
-
-  function getAllExchangeRates() {
-    var exchangeRates = {};
-    var promises = [];
-
-    for (var currency in coinAbbreviations) {
-      promises.push(getExchangeRate(currency));
-    }
-
-    return Promise.all(promises)
-      .then(function(results) {
-        results.forEach(function(result) {
-          exchangeRates[result.currency] = result.rate;
-        });
-
-        return exchangeRates;
-      })
-      .catch(function(error) {
-        console.log('Ошибка при получении курса валют:', error);
-        return exchangeRates;
-      });
-  }
-
-  function updateExchangeAmount() {
-    var fromAmount = parseFloat($("#inputFrom").val());
-    var fromCoin = $("#from").val();
-    var toCoin = $("#to").val();
-
-    if (fromAmount >= 0) {
-      var toAmount = (fromAmount * exchangeRates[fromCoin]) / exchangeRates[toCoin];
-      $("#inputTo").val(toAmount.toFixed(6));
-    } else {
-      $("#inputTo").val("0.000000");
-    }
-  }
-
-  function updateExchangeAmountInverse() {
-    var toAmount = parseFloat($("#inputTo").val());
-    var fromCoin = $("#from").val();
-    var toCoin = $("#to").val();
-
-    if (toAmount >= 0) {
-      var fromAmount = (toAmount * exchangeRates[toCoin]) / exchangeRates[fromCoin];
-      $("#inputFrom").val(fromAmount.toFixed(6));
-    } else {
-      $("#inputFrom").val("0.000000");
-    }
-  }
-
-  function updateExchangeRate() {
-    var fromCoin = $("#from").val();
-    var toCoin = $("#to").val();
-
-    var rate = exchangeRates[fromCoin] / exchangeRates[toCoin];
-    var formattedRate = rate.toFixed(9).replace(/(\d)(?=(\d{3})+\.)/g, "$1 ");
-
-    $("#bCurs").text("1 " + coinAbbreviations[fromCoin] + " = " + formattedRate + " " + coinAbbreviations[toCoin]);
-
-    // Обновить значения полей ввода при изменении курса
-    updateExchangeAmount();
-    updateExchangeAmountInverse();
-  }
-
-  $('#updateButton').click(function() {
-    getAllExchangeRates()
-      .then(function(result) {
-        exchangeRates = result;
-        console.log(exchangeRates);
-
-        updateExchangeRate();
-      });
-
-    $("#from").change(updateExchangeRate);
-    $("#to").change(updateExchangeRate);
-  });
-
-  $("#from").change(function() {
-    var selectedCoin = $(this).val();
-    var imageName = "images/svg/" + selectedCoin + ".svg";
-    var abbreviation = coinAbbreviations[selectedCoin];
-    $("#desc1").text(abbreviation);
-    $("#coin1").attr("src", imageName);
-    updateExchangeRate();
-  });
-
-  $("#to").change(function() {
-    var selectedCoin1 = $(this).val();
-    var imageName1 = "images/svg/" + selectedCoin1 + ".svg";
-    var abbreviation1 = coinAbbreviations[selectedCoin1];
-    $("#desc2").text(abbreviation1);
-    $("#coin2").attr("src", imageName1);
-    $("#coin3").attr("src", imageName1);
-    updateExchangeRate();
-  });
-
-  $("#inputFrom").on("input", function() {
-    updateExchangeAmount();
-  });
-
-  $("#inputTo").on("input", function() {
-    updateExchangeAmountInverse();
-  });
-
-  getAllExchangeRates()
-    .then(function(result) {
-      exchangeRates = result;
-
-      updateExchangeRate();
-    });
-
-  $("#from").change(updateExchangeRate);
-  $("#to").change(updateExchangeRate);
-});
-	</script>
+	<script src="js/translate.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
