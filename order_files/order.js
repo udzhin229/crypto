@@ -78,6 +78,8 @@ $(document).ready(function() {
             $('#payData').hide();
             $('#timerAndBtn').hide();
             $('#chek').show();
+            $('#status1').removeClass('statusRight').addClass('statusFull');
+            $('#status2').removeClass('statusEmpty').addClass('statusRight');
       });
       startTimer('divTimer', 'checkTimer');
   });

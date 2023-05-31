@@ -160,8 +160,6 @@ $(document).ready(function() {
     $("#to").change(updateExchangeRate);
 
     $('#submit').click(function(event) {
-        event.preventDefault();
-      
         // Получаем значения полей
         var inFromVal = $('#inputFrom').val();
         var inToVal = $('#inputTo').val();
@@ -169,18 +167,18 @@ $(document).ready(function() {
         var inMail = $('#inputEmail').val();
         var selFrom = $('#from').val();
         var selTo = $('#to').val();
+        var rules = $('#rules').val();
       
         // Проверка на пустые значения inWall и inMail
-        if (inWall === '' || inMail === '' || inFromVal <= 0 || inToVal <= 0) {
-          alert('Пожалуйста, заполните все поля.');
+        if (rules === false || inWall === '' || inMail === '') {
           return;
         }
-      
-        // Проверка на равенство нулю значений inFromVal и inToVal
-        // if () {
-        //   alert('Значения не могут быть равны нулю.');
-        //   return;
-        // }
+        event.preventDefault();
+
+        if (inFromVal <= 0 || inToVal <= 0) {
+          alert('Введите кол-во монет!');
+          return;
+        }
       
         // Сохраняем значения в localStorage
         localStorage.setItem('inFromVal', inFromVal);
