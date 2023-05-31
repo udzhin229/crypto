@@ -1126,7 +1126,7 @@ div.infoInputEmpty {
         display: none;
     }
     .left .select {
-        padding-left: 52px !important;
+        padding: 0 0 0 55px !important;
     }
     .coinicon {
         left: 18px !important;
@@ -1209,9 +1209,6 @@ div.infoInputEmpty {
     }
     .headerLogin div {
         display: none;
-    }
-    .left .select {
-        /*width: calc(60% - 4px) !important;*/
     }
     div#data {
         width: 96% !important;
@@ -1297,8 +1294,7 @@ div.infoInputEmpty {
         border-radius: unset;
     }
     .left .select {
-        padding: 15px 0 14px 100px;
-        text-indent:30px; 
+        text-indent: 50px; 
     }
     div.infoInput a {
         display: none;
