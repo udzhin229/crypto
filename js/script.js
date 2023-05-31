@@ -10,6 +10,8 @@ $(document).ready(function() {
       'stellar': 'XLM',
       'monero': 'XMR',
       'dash': 'DASH',
+      'erc20': 'ERC20',
+      'trc20': 'TRC20', 
       // Другие ключи и значения
     };
   
@@ -17,14 +19,14 @@ $(document).ready(function() {
     var selectedCoin = $("#from").val();
     var imageName = "images/svg/" + selectedCoin + ".svg";
     var abbreviation = coinAbbreviations[selectedCoin];
-    $("#desc1").text(abbreviation);
+    // $("#desc1").text(abbreviation);
     $("#coin1").attr("src", imageName);
   
     // Установка изображения при загрузке страницы
     var selectedCoin1 = $("#to").val();
     var imageName1 = "images/svg/" + selectedCoin1 + ".svg";
     var abbreviation1 = coinAbbreviations[selectedCoin1];
-    $("#desc2").text(abbreviation1);
+    // $("#desc2").text(abbreviation1);
     $("#coin2").attr("src", imageName1);
     $("#coin3").attr("src", imageName1);
   
@@ -50,17 +52,21 @@ $(document).ready(function() {
     function getAllExchangeRates() {
       var exchangeRates = {};
       var promises = [];
-  
+    
       for (var currency in coinAbbreviations) {
-        promises.push(getExchangeRate(currency));
+        if (currency !== 'erc20' && currency !== 'trc20') {
+          promises.push(getExchangeRate(currency));
+        } else {
+          exchangeRates[currency] = '1.000003';
+        }
       }
-  
+    
       return Promise.all(promises)
         .then(function(results) {
           results.forEach(function(result) {
             exchangeRates[result.currency] = result.rate;
           });
-  
+    
           return exchangeRates;
         })
         .catch(function(error) {
@@ -126,7 +132,7 @@ $(document).ready(function() {
       var selectedCoin = $(this).val();
       var imageName = "images/svg/" + selectedCoin + ".svg";
       var abbreviation = coinAbbreviations[selectedCoin];
-      $("#desc1").text(abbreviation);
+      // $("#desc1").text(abbreviation);
       $("#coin1").attr("src", imageName);
       updateExchangeRate();
     });
@@ -135,7 +141,7 @@ $(document).ready(function() {
       var selectedCoin1 = $(this).val();
       var imageName1 = "images/svg/" + selectedCoin1 + ".svg";
       var abbreviation1 = coinAbbreviations[selectedCoin1];
-      $("#desc2").text(abbreviation1);
+      // $("#desc2").text(abbreviation1);
       $("#coin2").attr("src", imageName1);
       $("#coin3").attr("src", imageName1);
       updateExchangeRate();

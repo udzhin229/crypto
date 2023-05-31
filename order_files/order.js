@@ -9,7 +9,9 @@ $(document).ready(function() {
         'eth': { name: 'ETH', wallet: 'examplewallet6' },
         'stellar': { name: 'XLM', wallet: 'examplewallet7' },
         'monero': { name: 'XMR', wallet: 'examplewallet8' },
-        'dash': { name: 'DASH', wallet: 'examplewallet9' }
+        'dash': { name: 'DASH', wallet: 'examplewallet9' },
+        'erc20': { name: 'ERC20', wallet: 'examplewallet8' },
+        'trc20': { name: 'TRC20', wallet: 'examplewallet8' }
     }
     // Получаем значения из localStorage
     var inFromVal = localStorage.getItem('inFromVal');

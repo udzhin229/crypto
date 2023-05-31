@@ -874,6 +874,10 @@ img.img2:hover {
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
     color: #ffffff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
 }
 .left .select option {
     background-color: #2b2e31;
@@ -941,6 +945,7 @@ div.grey {
     font-size: 80%;
     display: grid;
     place-items: center;
+    z-index: 1;
 }
 
 div.infoInput {
@@ -963,7 +968,8 @@ div.infoInputEmpty {
 }
 .coinicon {
     pointer-events: none;
-    position: relative;
+    position: absolute;
+    z-index: 1;
     width: 24px;
     height: 24px;
     margin-right: -24px;
@@ -1126,9 +1132,6 @@ div.infoInputEmpty {
         display: none;
     }
     .left .select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
         padding: 0 0 0 55px !important;
     }
     .coinicon {
