@@ -1085,6 +1085,9 @@ div.infoInputEmpty {
     }
 
     .left .select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         padding: 0 0 0 52px;
     }
     .coinicon {
