@@ -1297,7 +1297,8 @@ div.infoInputEmpty {
         border-radius: unset;
     }
     .left .select {
-        padding: 15px 0 14px 100px !important;
+        padding: 15px 0 14px 100px;
+        text-indent:30px; 
     }
     div.infoInput a {
         display: none;
